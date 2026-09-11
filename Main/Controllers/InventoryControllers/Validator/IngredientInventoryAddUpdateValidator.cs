@@ -12,7 +12,8 @@ namespace Main.Controllers.InventoryControllers.Validator
     {
         public IngredientInventoryAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.IngredientId).NotNull().NotEmpty();
             RuleFor(x => x.InitialQtyValue).NotNull().NotEmpty();
             RuleFor(x => x.RemainingQtyValue).NotNull().NotEmpty();

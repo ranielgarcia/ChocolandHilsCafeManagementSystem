@@ -12,7 +12,8 @@ namespace Main.Controllers.EmployeeManagementControllers.Validator
     {
         public EmployeePositionAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(e => e.Title).NotEmpty();
             RuleFor(e => e.DailyRate).NotEmpty();
         }

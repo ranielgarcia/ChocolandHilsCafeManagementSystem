@@ -12,7 +12,8 @@ namespace Main.Controllers.UserManagementControllers.Validator
     {
         public UserAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.UserName).NotEmpty();
             RuleFor(x => x.FullName).NotEmpty();
 

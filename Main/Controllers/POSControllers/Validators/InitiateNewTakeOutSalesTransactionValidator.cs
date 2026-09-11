@@ -12,7 +12,8 @@ namespace Main.Controllers.POSControllers.Validators
     {
         public InitiateNewTakeOutSalesTransactionValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.TransactionType).NotNull();
             RuleFor(x => x.TicketNumber).NotEmpty();
             RuleFor(x => x.CurrentUser).NotEmpty();

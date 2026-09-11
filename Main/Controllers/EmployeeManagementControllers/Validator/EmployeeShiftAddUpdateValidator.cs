@@ -12,7 +12,8 @@ namespace Main.Controllers.EmployeeManagementControllers.Validator
     {
         public EmployeeShiftAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.Shift).NotEmpty();
             RuleFor(x => x.StartTime).NotEmpty();
             RuleFor(x => x.NumberOfHrs).NotEmpty().NotEqual(0);

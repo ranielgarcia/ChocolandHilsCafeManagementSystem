@@ -12,7 +12,8 @@ namespace Main.Controllers.RequestControllers.Validators
     {
         public EmployeeCashAdvanceRequestValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(e => e.EmployeeNumber).NotEmpty();
             RuleFor(e => e.Amount).NotEmpty().NotEqual(0);
             RuleFor(e => e.EmployeeRemarks).NotEmpty();

@@ -12,7 +12,8 @@ namespace Main.Controllers.OtherDataController.Validator
     {
         public BranchAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.BranchName).NotEmpty();
             RuleFor(x => x.TellNo).NotEmpty().MinimumLength(11).MaximumLength(13);
             RuleFor(x => x.Address).NotEmpty();
