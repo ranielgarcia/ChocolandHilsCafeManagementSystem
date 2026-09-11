@@ -17,6 +17,7 @@
 USE ChocolandHilsCafeDb;
 
 SET FOREIGN_KEY_CHECKS = 0;
+SET SQL_SAFE_UPDATES = 0;
 
 -- --------------------------------------------------------------------------------------
 -- Reset (children before parents)
@@ -640,3 +641,4 @@ DROP TEMPORARY TABLE IF EXISTS Numbers4;
 DROP TEMPORARY TABLE IF EXISTS CalendarPrevMonth;
 
 SET FOREIGN_KEY_CHECKS = 1;
+SET SQL_SAFE_UPDATES = 1;
