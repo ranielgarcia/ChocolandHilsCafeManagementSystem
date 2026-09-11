@@ -6,7 +6,7 @@ USE ChocolandHilsCafeDb;
 
 -- Employee management, attendance and payroll related tables:
 
--- if the employer decided to change/increase or decrease days on specific leave
+-- if the employer decided tao change/increase or decrease days on specific leave
 -- just add new entry to retain the current records and deactivate the old one
 CREATE TABLE IF NOT EXISTS LeaveTypes(
 	id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- change to INT

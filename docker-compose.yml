@@ -7,7 +7,7 @@ services:
 
     environment:
       MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: appdb
+      MYSQL_DATABASE: ChocolandHilsCafeDb
       MYSQL_USER: appuser
       MYSQL_PASSWORD: app_password
 
@@ -32,7 +32,7 @@ services:
           "localhost",
           "-u",
           "root",
-          "-proot_password"
+          "-proot_password",
         ]
       interval: 10s
       timeout: 5s
