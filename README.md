@@ -16,6 +16,10 @@ That said, the client was very happy with the outcome of the project. Here's the
 >
 > *Beyond grateful to have been able to work on this project with Raniel. Would absolutely recommend!*
 
+## Upwork Public Profile
+
+[Raniel Garcia](https://www.upwork.com/freelancers/~01050e824656af667e?mp_source=share)
+
 ---
 
 ## Important Notes
