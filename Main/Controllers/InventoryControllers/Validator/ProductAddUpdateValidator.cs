@@ -12,7 +12,8 @@ namespace Main.Controllers.InventoryControllers.Validator
     {
         public ProductAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.ProdName).NotEmpty();
             RuleFor(x => x.CategoryId).NotEmpty();
             RuleFor(x => x.PricePerOrder).NotEmpty();

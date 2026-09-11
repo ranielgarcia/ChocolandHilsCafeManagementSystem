@@ -12,7 +12,8 @@ namespace Main.Controllers.EmployeeManagementControllers.Validator
     {
         public HolidayAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.Holiday).NotEmpty();
             RuleFor(x => x.MonthAbbr).NotEmpty();
             RuleFor(x => x.DayNum).NotEmpty().GreaterThan(0);

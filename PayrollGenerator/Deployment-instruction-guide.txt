@@ -5,15 +5,15 @@ to run even if the main application is closed.
 
 We need to separate this program.
 
-to deploy this, you need to copy the net5.0 folder to client computer folder (we just need to copy the program files manually)
+to deploy this, you need to copy the net10.0 folder to client computer folder (we just need to copy the program files manually)
 
 Go to ChocolandHilsCafeManagementSystem\PayrollGenerator\bin\Debug
 
-Copy net5.0 to any folder you want
+Copy net10.0 to any folder you want
 
-then open cmd.exe and go to the net5.0 folder in client computer (the folder you paste the net5.0)
+then open cmd.exe and go to the net10.0 folder in client computer (the folder you paste the net10.0)
 ex on cmd.exe:
-	cd D:/ChocolandHilsCafeMS/PayrollGenerator/net5.0
+	cd D:/ChocolandHilsCafeMS/PayrollGenerator/net10.0
 	then run: 
 		> PayrollGenerator.exe install ---> to install the application as service
 	go to Windows Services to verify the installation, you should see this PayrollGeneratorBackgroundService as service
@@ -28,7 +28,7 @@ ex on cmd.exe:
 
 Configuration:
 
-in net5.0 directory,
+in net10.0 directory,
 open the appsettings.json and configure the First and second paydate of the month, based on the ChocolandHils payroll
 
 "PayrollSettings": {
@@ -36,4 +36,3 @@ open the appsettings.json and configure the First and second paydate of the mont
     "SecondPayDayOfTheMonth": "28", -> ex. March 28, 2021
     "GeneratedPDFLoc": "D:\\Documents\\DinkToPDF\\" -> generated pdf location
   },
-

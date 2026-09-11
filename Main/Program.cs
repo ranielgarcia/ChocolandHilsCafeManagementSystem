@@ -118,7 +118,8 @@ namespace Main
         {
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += new UnhandledExceptionEventHandler(UnhandleExceptionHandler);
-            services.AddAutoMapper(currentDomain.GetAssemblies());
+            var autoMapperLicenseKey = confBuilder["AutoMapperLicenseKey"];
+            services.AddAutoMapper(cfg => cfg.LicenseKey = autoMapperLicenseKey, currentDomain.GetAssemblies());
 
             services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 

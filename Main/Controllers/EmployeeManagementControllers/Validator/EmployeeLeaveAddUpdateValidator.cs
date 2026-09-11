@@ -12,7 +12,8 @@ namespace Main.Controllers.EmployeeManagementControllers.Validator
     {
         public EmployeeLeaveAddUpdateValidator()
         {
-            this.CascadeMode = CascadeMode.Stop;
+            ClassLevelCascadeMode = CascadeMode.Stop;
+            RuleLevelCascadeMode = CascadeMode.Stop;
             RuleFor(x => x.LeaveId).NotEmpty();
             RuleFor(x => x.EmployeeNumber).NotEmpty();
             RuleFor(x => x.Reason).NotEmpty();
